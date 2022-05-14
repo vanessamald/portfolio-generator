@@ -1,10 +1,3 @@
-const fs = require('fs');
-
-const profileDataArgs = process.argv.slice(2, process.argv.lenght);
-console.log(profileDataArgs);
-
-const [name, github] = profileDataArgs;
-
 const generatePage = (name, github) => {
     return `
     <!DOCTYPE html> 
@@ -29,3 +22,5 @@ const generatePage = (name, github) => {
   
     console.log('Portfolio complete! Check out index.html to see the output!');
   });
+
+  module.exports = generatePage;
